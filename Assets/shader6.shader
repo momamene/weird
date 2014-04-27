@@ -4,7 +4,7 @@
         _MyColor ("Main Color", COLOR) = (1,1,1,1) 
 	}
 	SubShader {
-		Tags { "Queue"="Geometry" "RenderType"="Opaque" }
+		Tags { "Queue"="Geometry+6" "RenderType"="Opaque" }
 		LOD 200
         Pass { 
             Material { 
@@ -13,6 +13,7 @@
             } 
             Lighting On 
             ZTest LEqual
+            ZWrite Off
             SetTexture [_MainTex] { 
                     Combine texture * primary DOUBLE 
             }

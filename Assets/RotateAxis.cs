@@ -14,7 +14,5 @@ public class RotateAxis : MonoBehaviour {
 		float deltaY = Input.GetAxis("Mouse Y");
 		float scale = 10.0f, angle = scale * deltaY;
 		transform.RotateAround (axisObject.position, axisObject.TransformDirection (Vector3.forward), angle);
-		Debug.Log (deltaX);
-		Debug.Log (deltaY);
 	}
 }
