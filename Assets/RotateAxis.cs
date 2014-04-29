@@ -13,6 +13,8 @@ public class RotateAxis : MonoBehaviour {
 		float deltaX = Input.GetAxis("Mouse X");
 		float deltaY = Input.GetAxis("Mouse Y");
 		float scale = 10.0f, angle = scale * deltaY;
-		transform.RotateAround (axisObject.position, axisObject.TransformDirection (Vector3.forward), angle);
+		if (Input.GetMouseButton (0)) {
+			transform.RotateAround (axisObject.position, axisObject.TransformDirection (Vector3.forward), angle);
+		}
 	}
 }
