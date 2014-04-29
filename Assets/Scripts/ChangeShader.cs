@@ -12,12 +12,13 @@ public class ChangeShader : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		/*
 		Debug.Log(transform.rotation.z);
 		if (Mathf.Abs(transform.rotation.z) > 0.37f) {
 			target.renderer.material = replaced;
 		} else { 
 			target.renderer.material = original;
 		}
+*/
 	}
 }
