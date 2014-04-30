@@ -9,7 +9,8 @@ public class SurfaceEditor : Editor {
 		surface = target as Surface;
 	}
 
-	public void AdjacentLayout(string label, Surface.Adjacent adjacent) {
+	public void AdjacentLayout(string label, Surface.Adjacent adjacent)
+    {
 		EditorGUILayout.BeginVertical();
 		adjacent.state = (Surface.AdjacencyState)EditorGUILayout.EnumPopup(
 			label + " State",
@@ -27,7 +28,7 @@ public class SurfaceEditor : Editor {
 	public override void OnInspectorGUI() {
 		string[] labels = {"Top", "Bottom", "Left", "Right"};
 		Surface.Adjacent[] adjacents = {surface.top, surface.bottom, surface.left, surface.right};
-		for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < labels.Length; i++) {
 			AdjacentLayout(labels[i], adjacents[i]);
 		}
 		if (GUI.changed)
