@@ -6,11 +6,11 @@ public class Surface : MonoBehaviour {
 		FOLDED = 0,
 		UNFOLDED = 1
 	}
+    [System.Serializable]
 	public class Adjacent {
 		public Surface surface;
 		public AdjacencyState state;
 	}
-	public Surface asdf;
 	public Adjacent top = new Adjacent(), bottom = new Adjacent(), left = new Adjacent(), right = new Adjacent();
 	// Use this for initialization
 	void Start () {

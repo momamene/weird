@@ -8,7 +8,7 @@ public class VoxelGenerator : EditorWindow {
     {
         VoxelGenerator window = (VoxelGenerator)EditorWindow.GetWindow(typeof(VoxelGenerator));
     }
-    void InstantiateLayout(string label, Vector3 delta)
+    void ConcatLayout(string label, Vector3 delta)
     {
         Object prefabRoot = PrefabUtility.GetPrefabParent(Selection.activeGameObject);
         if (GUILayout.Button(label)) {
@@ -26,7 +26,7 @@ public class VoxelGenerator : EditorWindow {
             string[] labels = { "x+1", "x-1", "y+1", "y-1", "z+1", "z-1" };
             Vector3[] deltas = { Vector3.right, Vector3.left, Vector3.up, Vector3.down, Vector3.forward, Vector3.back };
             for (int i = 0; i < labels.Length; i++) {
-                InstantiateLayout(labels[i], deltas[i]);
+                ConcatLayout(labels[i], deltas[i]);
             }
         }
     }
