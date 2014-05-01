@@ -32,7 +32,7 @@ GameObject:
   - 23: {fileID: 2300002}
   - 114: {fileID: 11400002}
   m_Layer: 0
-  m_Name: Back
+  m_Name: Forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ GameObject:
   - 23: {fileID: 2300004}
   - 114: {fileID: 11400004}
   m_Layer: 0
-  m_Name: Forward
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,18 +470,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top:
-    surface: {fileID: 11400004}
-    state: 0
-  bottom:
-    surface: {fileID: 11400002}
-    state: 0
-  left:
-    surface: {fileID: 11400008}
-    state: 0
-  right:
-    surface: {fileID: 11400010}
-    state: 0
+  top: {fileID: 11400010}
+  bottom: {fileID: 11400008}
+  left: {fileID: 11400002}
+  right: {fileID: 11400004}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -493,18 +485,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top:
-    surface: {fileID: 11400010}
-    state: 0
-  bottom:
-    surface: {fileID: 11400008}
-    state: 0
-  left:
-    surface: {fileID: 11400000}
-    state: 0
-  right:
-    surface: {fileID: 11400006}
-    state: 0
+  top: {fileID: 11400010}
+  bottom: {fileID: 11400008}
+  left: {fileID: 11400006}
+  right: {fileID: 11400000}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -516,18 +500,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top:
-    surface: {fileID: 11400008}
-    state: 0
-  bottom:
-    surface: {fileID: 11400010}
-    state: 0
-  left:
-    surface: {fileID: 11400006}
-    state: 0
-  right:
-    surface: {fileID: 11400000}
-    state: 0
+  top: {fileID: 11400010}
+  bottom: {fileID: 11400008}
+  left: {fileID: 11400006}
+  right: {fileID: 11400000}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -539,18 +515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top:
-    surface: {fileID: 11400002}
-    state: 0
-  bottom:
-    surface: {fileID: 11400004}
-    state: 0
-  left:
-    surface: {fileID: 11400010}
-    state: 0
-  right:
-    surface: {fileID: 11400008}
-    state: 0
+  top: {fileID: 11400010}
+  bottom: {fileID: 11400008}
+  left: {fileID: 11400002}
+  right: {fileID: 11400004}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -562,18 +530,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top:
-    surface: {fileID: 11400006}
-    state: 0
-  bottom:
-    surface: {fileID: 11400000}
-    state: 0
-  left:
-    surface: {fileID: 11400002}
-    state: 0
-  right:
-    surface: {fileID: 11400004}
-    state: 0
+  top: {fileID: 11400000}
+  bottom: {fileID: 11400006}
+  left: {fileID: 11400002}
+  right: {fileID: 11400004}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -585,18 +545,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top:
-    surface: {fileID: 11400000}
-    state: 0
-  bottom:
-    surface: {fileID: 11400006}
-    state: 0
-  left:
-    surface: {fileID: 11400004}
-    state: 0
-  right:
-    surface: {fileID: 11400002}
-    state: 0
+  top: {fileID: 11400000}
+  bottom: {fileID: 11400006}
+  left: {fileID: 11400002}
+  right: {fileID: 11400004}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -608,6 +560,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6437b5050e2e42d79b497033b8b718d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up: {fileID: 11400010}
+  down: {fileID: 11400008}
+  left: {fileID: 11400006}
+  right: {fileID: 11400000}
+  forward: {fileID: 11400002}
+  back: {fileID: 11400004}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
