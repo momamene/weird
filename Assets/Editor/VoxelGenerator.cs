@@ -10,15 +10,15 @@ public class VoxelGenerator : EditorWindow {
     }
     void ConcatBack(Voxel selected, Voxel cloned) {
         Surface attached_selected = selected.back, attached_cloned = cloned.forward;
-        attached_selected.top.right = attached_cloned.top;
-        attached_selected.bottom.right = attached_cloned.bottom;
-        attached_selected.left.right = attached_cloned.left;
-        attached_selected.right.right = attached_cloned.right;
+        selected.getOriginalTop(attached_selected).right = cloned.getOriginalTop(attached_cloned);
+        selected.getOriginalBottom(attached_selected).right = cloned.getOriginalBottom(attached_cloned);
+        selected.getOriginalLeft(attached_selected).right = cloned.getOriginalLeft(attached_cloned);
+        selected.getOriginalRight(attached_selected).right = cloned.getOriginalRight(attached_cloned);
 
-        attached_cloned.top.left = attached_selected.top;
-        attached_cloned.bottom.left = attached_selected.bottom;
-        attached_cloned.left.left = attached_selected.left;
-        attached_cloned.right.left = attached_selected.right;
+        cloned.getOriginalTop(attached_cloned).left = selected.getOriginalTop(attached_selected);
+        cloned.getOriginalBottom(attached_cloned).left = selected.getOriginalBottom(attached_selected);
+        cloned.getOriginalLeft(attached_cloned).left = selected.getOriginalLeft(attached_selected);
+        cloned.getOriginalRight(attached_cloned).left = selected.getOriginalRight(attached_selected);
     }
     void ConcatForward(Voxel selected, Voxel cloned)
     {
@@ -28,15 +28,15 @@ public class VoxelGenerator : EditorWindow {
     {
         Surface attached_selected = selected.left, attached_cloned = cloned.right;
 
-        attached_selected.top.bottom = attached_cloned.top;
-        attached_selected.bottom.top = attached_cloned.bottom;
-        attached_selected.left.left = attached_cloned.left;
-        attached_selected.right.left = attached_cloned.right;
+        selected.getOriginalTop(attached_selected).bottom = cloned.getOriginalTop(attached_cloned);
+        selected.getOriginalBottom(attached_selected).top = cloned.getOriginalBottom(attached_cloned);
+        selected.getOriginalLeft(attached_selected).left = cloned.getOriginalLeft(attached_cloned);
+        selected.getOriginalRight(attached_selected).left = cloned.getOriginalRight(attached_cloned);
 
-        attached_cloned.top.bottom = attached_selected.top;
-        attached_cloned.bottom.top = attached_selected.bottom;
-        attached_cloned.left.right = attached_selected.left;
-        attached_cloned.right.right = attached_selected.right;
+        cloned.getOriginalTop(attached_cloned).bottom = selected.getOriginalTop(attached_selected);
+        cloned.getOriginalBottom(attached_cloned).top = selected.getOriginalBottom(attached_selected);
+        cloned.getOriginalLeft(attached_cloned).right = selected.getOriginalLeft(attached_selected);
+        cloned.getOriginalRight(attached_cloned).right = selected.getOriginalRight(attached_selected);
     }
     void ConcatRight(Voxel selected, Voxel cloned)
     {
@@ -46,15 +46,15 @@ public class VoxelGenerator : EditorWindow {
     {
         Surface attached_selected = selected.up, attached_cloned = cloned.down;
 
-        attached_selected.top.top = attached_cloned.top;
-        attached_selected.bottom.top = attached_cloned.bottom;
-        attached_selected.left.top = attached_cloned.left;
-        attached_selected.right.top = attached_cloned.right;
+        selected.getOriginalTop(attached_selected).top = cloned.getOriginalTop(attached_cloned);
+        selected.getOriginalBottom(attached_selected).top = cloned.getOriginalBottom(attached_cloned);
+        selected.getOriginalLeft(attached_selected).top = cloned.getOriginalLeft(attached_cloned);
+        selected.getOriginalRight(attached_selected).top = cloned.getOriginalRight(attached_cloned);
 
-        attached_cloned.top.bottom = attached_selected.top;
-        attached_cloned.bottom.bottom = attached_selected.bottom;
-        attached_cloned.left.bottom = attached_selected.left;
-        attached_cloned.right.bottom = attached_selected.right;    
+        cloned.getOriginalTop(attached_cloned).bottom = selected.getOriginalTop(attached_selected);
+        cloned.getOriginalBottom(attached_cloned).bottom = selected.getOriginalBottom(attached_selected);
+        cloned.getOriginalLeft(attached_cloned).bottom = selected.getOriginalLeft(attached_selected);
+        cloned.getOriginalRight(attached_cloned).bottom = selected.getOriginalRight(attached_selected);    
     }
     void ConcatDown(Voxel selected, Voxel cloned)
     {
