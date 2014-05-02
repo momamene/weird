@@ -10,9 +10,7 @@ public class VoxelGenerator : EditorWindow {
     }
     void ConcatBack(Voxel selected, Voxel cloned) {
         Surface attached_selected = selected.back, attached_cloned = cloned.forward;
-        Debug.Log(attached_selected.top.right);
         attached_selected.top.right = attached_cloned.top;
-        Debug.Log(attached_selected.top.right);
         attached_selected.bottom.right = attached_cloned.bottom;
         attached_selected.left.right = attached_cloned.left;
         attached_selected.right.right = attached_cloned.right;
@@ -42,7 +40,7 @@ public class VoxelGenerator : EditorWindow {
     }
     void ConcatRight(Voxel selected, Voxel cloned)
     {
-        ConcatBack(cloned, selected);
+		ConcatLeft(cloned, selected);
     }
     void ConcatUp(Voxel selected, Voxel cloned)
     {
@@ -60,7 +58,7 @@ public class VoxelGenerator : EditorWindow {
     }
     void ConcatDown(Voxel selected, Voxel cloned)
     {
-        ConcatBack(cloned, selected);
+		ConcatUp(cloned, selected);
     }
     void ConcatVoxel(GameObject selected, GameObject cloned, Vector3 delta)
     {
@@ -101,12 +99,13 @@ public class VoxelGenerator : EditorWindow {
     }
     void OnGUI()
     {
-        if (Selection.activeGameObject) {
+		if (Selection.activeGameObject && Selection.activeGameObject.GetComponent<Voxel>()) {
             string[] labels = { "x+1", "x-1", "y+1", "y-1", "z+1", "z-1" };
             Vector3[] deltas = { Vector3.right, Vector3.left, Vector3.up, Vector3.down, Vector3.forward, Vector3.back };
             for (int i = 0; i < labels.Length; i++) {
                 InstantiateLayout(labels[i], deltas[i]);
             }
+			PathFinder.Instance.UpdatePath();
         }
     }
 }

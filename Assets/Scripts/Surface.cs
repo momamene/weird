@@ -6,7 +6,6 @@ public class Surface : MonoBehaviour {
     public bool isFolded(Surface surface)
     {
         if (this.top == surface || this.bottom == surface || this.left == surface || this.right == surface) {
-            Debug.Log(gameObject.transform.parent.name);
             return gameObject.transform.parent == surface.transform.parent;
         }
         return false;
@@ -18,5 +17,11 @@ public class Surface : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+	[ContextMenu ("Set to root of path finder ")]
+	void SetToRootOfPathFinder()
+	{
+		PathFinder.Instance.root = this;
+		PathFinder.Instance.UpdatePath ();
 	}
 }
