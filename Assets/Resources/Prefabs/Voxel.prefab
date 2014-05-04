@@ -470,10 +470,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top: {fileID: 11400010}
-  bottom: {fileID: 11400008}
-  left: {fileID: 11400002}
-  right: {fileID: 11400004}
+  adjacent:
+  - {fileID: 11400002}
+  - {fileID: 11400010}
+  - {fileID: 11400004}
+  - {fileID: 11400008}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -485,10 +486,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top: {fileID: 11400010}
-  bottom: {fileID: 11400008}
-  left: {fileID: 11400006}
-  right: {fileID: 11400000}
+  adjacent:
+  - {fileID: 11400006}
+  - {fileID: 11400010}
+  - {fileID: 11400000}
+  - {fileID: 11400008}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -500,10 +502,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top: {fileID: 11400010}
-  bottom: {fileID: 11400008}
-  left: {fileID: 11400006}
-  right: {fileID: 11400000}
+  adjacent:
+  - {fileID: 11400006}
+  - {fileID: 11400010}
+  - {fileID: 11400000}
+  - {fileID: 11400008}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -515,10 +518,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top: {fileID: 11400010}
-  bottom: {fileID: 11400008}
-  left: {fileID: 11400002}
-  right: {fileID: 11400004}
+  adjacent:
+  - {fileID: 11400002}
+  - {fileID: 11400010}
+  - {fileID: 11400004}
+  - {fileID: 11400008}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -530,10 +534,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top: {fileID: 11400000}
-  bottom: {fileID: 11400006}
-  left: {fileID: 11400002}
-  right: {fileID: 11400004}
+  adjacent:
+  - {fileID: 11400002}
+  - {fileID: 11400000}
+  - {fileID: 11400004}
+  - {fileID: 11400006}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -545,10 +550,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896c1b6500b104e0fa2b492a9086abab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  top: {fileID: 11400000}
-  bottom: {fileID: 11400006}
-  left: {fileID: 11400002}
-  right: {fileID: 11400004}
+  adjacent:
+  - {fileID: 11400002}
+  - {fileID: 11400000}
+  - {fileID: 11400004}
+  - {fileID: 11400006}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -33,18 +33,11 @@ public class PathFinder : MonoBehaviour {
         while (queue.Count > 0) {
             Surface current = queue.Dequeue();
             path.Add(current);
-            if (!current.isFolded(current.top) && !path.Contains(current.top)) {
-                queue.Enqueue(current.top);
-            }
-            if (!current.isFolded(current.bottom) && !path.Contains(current.bottom)) {
-                queue.Enqueue(current.bottom);
-            }
-            if (!current.isFolded(current.left) && !path.Contains(current.left)) {
-                queue.Enqueue(current.left);
-            }
-            if (!current.isFolded(current.right) && !path.Contains(current.right)) {
-                queue.Enqueue(current.right);
-            }
+			for (int i = 0; i < 4; i++) {
+				if (!current.isInSameVoxel(current.adjacent[i]) && !path.Contains(current.adjacent[i])) {
+					queue.Enqueue(current.adjacent[i]);
+				}
+			}
         }
         return path;
     }
