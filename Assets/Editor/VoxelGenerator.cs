@@ -41,6 +41,10 @@ public class VoxelGenerator : EditorWindow {
             cloned.transform.position = selected.transform.position + delta;
             cloned.transform.parent = selected.transform.parent;
             cloned.name = prefabRoot.name + cloned.transform.position;
+            Surface[] surfaces = cloned.GetComponentsInChildren<Surface>();
+            foreach (Surface surface in surfaces) {
+                surface.name = surface.name + cloned.transform.position;
+            }
             Selection.activeGameObject = cloned;
             ConcatVoxel(selected, cloned, delta);
         }

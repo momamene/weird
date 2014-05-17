@@ -44,14 +44,10 @@ public class PathFinder : MonoBehaviour {
 	void OnDrawGizmos()
 	{
 		Gizmos.color = Color.red;
-		Surface prev = null;
 		foreach (Surface surface in path) {
-			if (prev != null)
-			{
-				Gizmos.DrawSphere(prev.transform.position, 0.2f);
+            if (surface != null) {
 				Gizmos.DrawSphere(surface.transform.position, 0.2f);
 			}
-			prev = surface;
 		}
 	}
 }
